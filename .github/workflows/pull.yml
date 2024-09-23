@@ -21,9 +21,9 @@ jobs:
         run: |
           git config pull.rebase false
           git config --global user.name 'AutoPull'
-          git config --global user.email 'autopull@cuojue.org'
+          git config --global user.email 'werda66@outlook.com'
           export oldver=$(git rev-parse --short HEAD)
-          git pull https://github.com/LSPosed/LSPosed
+          git pull https://github.com/JingMatrix/LSPosed
           if [ $(git rev-parse --short HEAD) != $oldver ]; then
             git commit --amend --no-edit -m "Auto Merge $(date '+%Y-%m-%d %H:%M:%S')"
             git push origin LSPosed
